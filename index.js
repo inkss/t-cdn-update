@@ -49,7 +49,7 @@ try {
 function safeConfig() {
   return new Promise((resolve, reject) => {
     try {
-      const safeData = JSON.parse(fs.readFileSync('./safe.json', 'utf8'));
+      const safeData = JSON.parse(fs.readFileSync('./option/safe.json', 'utf8'));
       client.DescribeDomains({
         "Limit": 1000
       }).then(data => {

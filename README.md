@@ -15,4 +15,3 @@ export secretId = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 export secretKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 node index.js safe
 ```
-
