@@ -6,7 +6,7 @@
 npm install tencentcloud-sdk-nodejs --save
 ```
 
-## Type
+## Option
 
 ### safe
 
