@@ -15,3 +15,10 @@ export secretId = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 export secretKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 node index.js safe
 ```
+
+PowerShell 环境变量
+
+```powershell
+$env:secretId="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+$env:secretKey="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```

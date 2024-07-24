@@ -50,7 +50,7 @@ const client = new cdnClient({
 
 async function safeConfig() {
   try {
-    const safeData = JSON.parse(await fs.readFile('./option/safe.json', 'utf8'));
+    const safeData = JSON.parse(fs.readFileSync('./option/safe.json', 'utf8'));
     const data = await client.DescribeDomains({ "Limit": 1000 });
     const promises = data?.Domains.map(async (element) => {
       const params = { ...safeData, 'Domain': element?.Domain };

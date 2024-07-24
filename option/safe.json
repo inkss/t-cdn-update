@@ -1,17 +1,18 @@
 {  
   "Ipv6Access": {
-    "Switch": "on"
+    "Switch": "off"
   },
   "IpFilter": {
     "Switch": "on",
     "FilterType": "blacklist",
     "Filters": [
-      "60.221.195.0/24"
+      "60.221.195.0/24",
+      "60.220.182.0/24"
     ]
   },
   "IpFreqLimit": {
     "Switch": "on",
-    "Qps": 100
+    "Qps": 30
   },
   "DownstreamCapping": {
     "Switch": "on",
@@ -30,10 +31,10 @@
     "StatisticItems": [
       {
         "Type": "total",
-        "UnBlockTime": 1440,
+        "UnBlockTime": 720,
         "BpsThreshold": 5000000000,
         "CounterMeasure": "RETURN_404",
-        "AlertPercentage": 60,
+        "AlertPercentage": 30,
         "AlertSwitch": "on",
         "Metric": "flux",
         "Cycle": 1440,
