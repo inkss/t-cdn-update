@@ -54,7 +54,7 @@
       {
         "RuleType": "all",
         "RulePaths": ["*"],
-        "UserAgents": ["*Python*|*python*|*curl*l*Curl*|*wget|*Wget*"],
+        "UserAgents": ["*Python*|*python*|*curl*|*Curl*|*wget|*Wget*"],
         "FilterType": "blacklist"
       },
       {
