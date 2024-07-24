@@ -1,0 +1,73 @@
+{  
+  "Ipv6Access": {
+    "Switch": "on"
+  },
+  "IpFilter": {
+    "Switch": "on",
+    "FilterType": "blacklist",
+    "Filters": [
+      "60.221.195.0/24"
+    ]
+  },
+  "IpFreqLimit": {
+    "Switch": "on",
+    "Qps": 100
+  },
+  "DownstreamCapping": {
+    "Switch": "on",
+    "CappingRules": [
+      {
+        "RuleType": "all",
+        "RulePaths": [
+          "*"
+        ],
+        "KBpsThreshold": 5120
+      }
+    ]
+  },
+  "BandwidthAlert": {
+    "Switch": "on",
+    "StatisticItems": [
+      {
+        "Type": "total",
+        "UnBlockTime": 1440,
+        "BpsThreshold": 5000000000,
+        "CounterMeasure": "RETURN_404",
+        "AlertPercentage": 60,
+        "AlertSwitch": "on",
+        "Metric": "flux",
+        "Cycle": 1440,
+        "Switch": "on"
+      }
+    ]
+  },
+  "UserAgentFilter": {
+    "Switch": "on",
+    "FilterRules": [
+      {
+        "RuleType": "all",
+        "RulePaths": ["*"],
+        "UserAgents": ["*nmap*|*NMAP*|*HTTrack*|*sqlmap*|*Java*|*zgrab*"],
+        "FilterType": "blacklist"
+      },
+      {
+        "RuleType": "all",
+        "RulePaths": ["*"],
+        "UserAgents": ["*Python*|*python*|*curl*l*Curl*|*wget|*Wget*"],
+        "FilterType": "blacklist"
+      },
+      {
+        "RuleType": "all",
+        "RulePaths": ["*"],
+        "UserAgents": ["*MJ12bot*|*a Palo Alto*|*ltx71*|*censys*|*AhrefsBot*"],
+        "FilterType": "blacklist"
+      },
+      {
+        "RuleType": "all",
+        "RulePaths": ["*"],
+        "UserAgents": ["*Go-http-client*|*CensysInspect*|*toutiao*|*Barkrowler*"],
+        "FilterType": "blacklist"
+      }
+    ]
+  }
+}
